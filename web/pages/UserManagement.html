@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head class="flex">
+    <script defer src="/Farm3/web/js/getusers.js" type="module"></script>
+
+    <link rel="stylesheet" href="/Farm3/web/pp.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            [Enter Name Here]
+        </div>
+
+        <div class="hamburger">
+
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+
+        </div>
+
+
+        <nav class="nav-bar">
+
+            <ul>
+                <li>
+                    <a href="/Farm3/web/pages/admin.html">Farm Management</a>
+                </li>
+
+                <li>
+                    <a href="/Farm3/web/pages/CropFields.html">Crop Fields</a>
+                </li>
+
+                <li>
+                    <a href="/Farm3/web/pages/page3.html">Logout</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <table id="excelDataTable" border="1">
+    </table>
+
+
+
+    <h1>User Management</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>USER-ROLE</th>
+
+            </tr>
+        </thead>
+        <tbody id="data-output">
+            <!-- Prodcuts from javascript file in here. -->
+        </tbody>
+    </table>
+
+
+
+    <br>
+    <br>
+    <button>
+        <a href="/Farm3/web/pages/AddUsers.html">
+            ADD USERS
+        </a>
+    </button>
+
+</body>
+
+
+</html>

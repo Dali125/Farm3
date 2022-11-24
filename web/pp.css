@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+* {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Quicksand', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ad2 {
+    background: url('/Farm3/web/images/user-management.gif');
+    height: 80vh;
+    width: 40vw;
+    background-size: cover;
+    border-radius: 30px;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 2;
+    -webkit-filter: brightness(70%);
+}
+
+.box {
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    background-color: red;
+    padding: 20px;
+    border: 20px solid black;
+    margin: 50px;
+}
+
+.bGround {
+    background-color: black;
+}
+
+.MajorH {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 70px;
+}
+
+body {
+    background-color: black;
+}
+
+p {
+    color: #FFFFFF;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 90vh;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 3s;
+}
+
+.show {
+    opacity: 3;
+}
+
+header {
+    background: #FFFFFF;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4 100px;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 0 5px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar.active {
+    height: 450px;
+    color: #FFFFFF;
+}
+
+.nav-bar ul li a:hover {
+    color: #fefefe;
+    background: #000
+}
+
+.nav-bar ul li a.active {
+    color: #000;
+    background: blue;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+    .pictureStuff {
+        flex-grow: inherit;
+        border-radius: 2px 16px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+    .ad2 {
+        background: url('/Farm3/web/images/user-management.gif');
+        height: 40vh;
+        width: 40vw;
+        background-size: cover;
+        border-radius: 30px;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-between;
+        gap: 2;
+        -webkit-filter: brightness(70%);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .ad2 {
+        background: url('/Farm3/web/images/user-management.gif');
+        height: 30vh;
+        width: 40vw;
+        background-size: cover;
+        border-radius: 30px;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-between;
+        gap: 2;
+        -webkit-filter: brightness(70%);
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #000;
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #fefefe;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5;
+        opacity: 0;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+    .pictureStuff {
+        width: 400px;
+        padding: 105px;
+        border-radius: 2px 16px;
+    }
+    .Norms {
+        font-size: 25px;
+    }
+    .MajorH {
+        font-size: 35px;
+    }
+}
+
+.pictureStuff {
+    vertical-align: top;
+    border-radius: 2px 16px;
+}
+
+.Norms {
+    font-size: 40px;
+    text-align: center;
+}
+
+footer {
+    background: gray;
+    color: #fefefe;
+    height: 80px;
+    width: 100%;
+}
+
+.sizedBox {
+    height: 120px;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 34;
+}
+
+.child {
+    float: left;
+    width: 50%;
+    display: flex;
+    margin-top: -10;
+}
+
+.child:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+.inText {
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    height: 30vh;
+    width: 30vw;
+    font-size: 4vmin;
+}
+
+.inText2 {
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    height: 30vh;
+    width: 30vw;
+}
+
+.ad1 {
+    background: url('/images/pexels-livier-garcia-1459331.jpg');
+    height: 40vh;
+    width: 30vw;
+    background-size: cover;
+    border-radius: 30px;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 2;
+    -webkit-filter: brightness(70%);
+}
+
+.ad3 {
+    background: url('/images/pexels-livier-garcia-1459331.jpg');
+    height: 40vh;
+    width: 30vw;
+    background-size: cover;
+    border-radius: 30px;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 2;
+    -webkit-filter: brightness(70%);
+}
+
+.ad1:hover {
+    -webkit-filter: brightness(100%);
+}
+
+.ad2:hover {
+    -webkit-filter: brightness(100%);
+}
+
+.ad3:hover {
+    -webkit-filter: brightness(100%);
+}
+
+.mnm {
+    color: #fff;
+}
+
+table td {
+    color: #fefefe;
+    padding: 10px;
+    border: thin solid #d4d4d4;
+    width: 18%;
+    text-align: center;
+    background-color: #000000;
+}
+
+table select:focus {
+    outline: none;
+}
+
+table select {
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    border: thin solid #d4d4d4;
+    background-color: transparent;
+}
+
+table a:active {
+    background-color: #ccf4d6;
+    color: green;
+}
+
+table th {
+    padding: 10px 0;
+    background-color: #f4f4f4;
+    /* background-color: #fff; */
+    border: thin solid #d4d4d4;
+}
