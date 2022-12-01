@@ -1,36 +1,41 @@
-const btn = document.getElementById('submiter')
-const form = document.getElementById('form')
+var jso
+
+function handleSubmit(event){
+event.preventDefault();
+
+const data = new FormData(event.target);
 
 
-let formData = new FormData(form);
+const value = Object.fromEntries(data.entries());
 
 
-var object = {};
-formData.forEach(function(value, key) {
-    object[key] = value;
-});
-var json = JSON.stringify(object);
+ jso = JSON.stringify(value);
 
 
-btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    subscribe();
-});
+console.log({value})
 
 
+// However to make it work, we are going to use the cors-anywhere free service to bypass this
 
-const subscribe = async() => {
-    try {
-        let response = await fetch('http://localhost:8080/users/save', {
-            method: 'POST',
-            mode: 'no-cors',
-            body: json,
-        });
-        const result = await response.json();
 
-        showMessage(result.message, response.status == 200 ? 'success' : 'error');
-    } catch (error) {
-        console.log('ajbcojs')
-        console.log(formData)
-    }
-};
+console.log({jso})
+
+//fetch('htttp://localhost:8080/users/save',{
+//method: 'POST',
+//body: JSON.stringify(jso)
+//})
+var xhr = new XMLHttpRequest();
+var proxy = 'https://cors-anywhere.herokuapp.com/';
+
+var url = "http://localhost:8080/users/save";
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.send(jso);
+}
+
+
+  const form = document.querySelector('form');
+  form.addEventListener('submit', handleSubmit);
+
+

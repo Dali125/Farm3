@@ -18,7 +18,8 @@ public class UserController {
     @Autowired
     UserService userService;
 
-   @PostMapping(path = "/save")
+    @CrossOrigin(origins = "*")
+    @PostMapping(path = "/save")
     public ResponseEntity<String> saveUsers(@RequestBody Users users){
         if (userService.saveUser(users)){
             return new ResponseEntity<>("User Saved", HttpStatus.OK);
